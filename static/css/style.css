@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -65,18 +66,13 @@ a:visited {
     width: 154px;
     height: 18px;
 
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 114.5%;
-    /* or 18px */
 
     letter-spacing: -0.015em;
 
     color: #000000;
-
-    /* Inside auto layout */
 
     flex: none;
     order: 0;
@@ -84,8 +80,6 @@ a:visited {
 }
 
 #link {
-    /* Auto layout */
-
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -95,9 +89,6 @@ a:visited {
 
     width: 155px;
     height: 18px;
-
-
-    /* Inside auto layout */
 
     flex: none;
     order: 1;
@@ -116,12 +107,9 @@ a:visited {
 
 #main-text-inner>p {
     margin-bottom: 10px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 114.5%;
-    /* or 18px */
 
     letter-spacing: -0.015em;
 
