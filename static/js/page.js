@@ -73,3 +73,4 @@ for (let i = 2; i <= mainImageContainer.childElementCount; i++) {
 }
 mainImagediv.appendChild(mainImageInnerdiv);
 godDiv.appendChild(mainImagediv);
+notionDiv.remove();
