@@ -18,15 +18,14 @@ def page():
 
 @app.route('/deploy', methods=('POST',))
 def deploy():
-    data = notion.deploy_page(request.form["notion_url"])
+    res = request.json
+    data = notion.deploy_page(res["notion_url"])
     if data["status"] == "success":
         print("deployed")
-        return { "status": 200, "result": data["result"] }
+        return jsonify({ "status": 200, "result": data["result"] })
     else:
         print("deploy fail")
-        return { "status": 503, "result": data["result"] }
+        return jsonify({ "status": 503, "result": data["result"] })
     
-
-        
 if __name__=="__main__":
     app.run(host="0.0.0.0", port="5000", debug=True)

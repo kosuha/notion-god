@@ -3,11 +3,25 @@
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
 body {
     padding: 0px;
     margin: 0px;
     width: 100vw;
     height: 100vh;
+}
+
+#page-url-wraper {
+    margin: 20px;
 }
 
 #title-logo {
@@ -19,16 +33,6 @@ body {
 #url-input {
     width: 500px;
     height: 30px;
-}
-
-a {
-    text-decoration: none;
-    color: #000000;
-}
-
-a:visited {
-    text-decoration: none;
-    color: #000000;
 }
 
 #god {

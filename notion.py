@@ -53,13 +53,17 @@ def deploy_page(url):
 			cur.execute(sql, (url, html))
 			conn.commit()
 			conn.close()
-			return { "status": "success", "result": url }
+			res_url = url.replace("/", "%2F")
+			res_url = res_url.replace(":", "%3A")
+			return { "status": "success", "result": res_url }
 		else:
 			sql = '''UPDATE pages SET html = ? WHERE url = ?'''
 			cur.execute(sql, (html, url))
 			conn.commit()
 			conn.close()
-			return { "status": "success", "result": url }
+			res_url = url.replace("/", "%2F")
+			res_url = res_url.replace(":", "%3A")
+			return { "status": "success", "result": res_url }
 	except Exception as e:
 		print(e)
 		return { "status": "fail", "result": "Error: " + e }

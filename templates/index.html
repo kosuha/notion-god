@@ -7,16 +7,16 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-	<script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </head>
 <body>
-	<div id="form-wraper">
+	<div id="body-container">
 		<h1 id="title-logo">NOTION GOD</h1>
-		<form action="/deploy" method="post" target="notion_url">
-			notion_url : <input id="url-input" type="text" name="notion_url">
-			<input id="submit-button" type="submit" value="Deploy">
-		</form>
-		<iframe id="if" name="notion_url" style="display:none"></iframe>
+		<div id="form-wraper">
+			notion_url : <input id="url-input" type="text">
+			<input id="submit-button" type="submit">
+		</div>
+		<div id="page-url-wraper"></div>
 	</div>
+	<script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </body>
 </html>
