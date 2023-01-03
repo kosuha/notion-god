@@ -17,7 +17,8 @@ def deploy_page(url):
 		fetch_list = res.fetchone()
 
 		options = webdriver.ChromeOptions()
-		options.add_argument("headless")
+		options.add_argument("--headless")
+		options.add_argument("--no-sandbox")
 		browser = webdriver.Chrome("chromedriver", options=options)
 		browser.get(url)
 		wait = WebDriverWait(browser, 30)
