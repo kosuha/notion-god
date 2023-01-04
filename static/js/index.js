@@ -27,9 +27,10 @@ submitButton.addEventListener("click", () => {
 	fetch(url, param)
 		.then((data) => {return data.json()})
 		.then((res) => {
+			console.log(res);
 			loading.remove()
 			if (res["status"] == 200) {
-				deployedPageUrl = "http://" + window.location.host + "/page?notion_url=" + res["result"];
+				deployedPageUrl = "https://" + window.location.host + "/page?notion_url=" + res["result"];
 				let pageUrl = document.createElement("a");
 				pageUrl.textContent = "배포한 페이지 열기";
 				pageUrl.setAttribute("href", deployedPageUrl);
@@ -42,5 +43,7 @@ submitButton.addEventListener("click", () => {
 			}
 			submitButton.disabled = false;
 		})
-		.catch((error) => console.log(error));
+		.catch((error) => {
+			console.log(error)
+		});
 });
