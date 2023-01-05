@@ -25,7 +25,10 @@ submitButton.addEventListener("click", () => {
 	};
 
 	fetch(url, param)
-		.then((data) => {return data.json()})
+		.then((data) => {
+			console.log(data);
+			return data.json()
+		})
 		.then((res) => {
 			console.log(res);
 			loading.remove()
